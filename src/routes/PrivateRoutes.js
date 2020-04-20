@@ -16,7 +16,7 @@ const PrivateRoutes = ({ location, history, path, component, exact }) => {
     }
   }, [currentUser, history, location.pathname]);
 
-  return <Route history={history} path={path} component={component} exact={exact} />;
+  return <Route path={path} component={component} exact={exact} />;
 };
 
 export default withRouter(PrivateRoutes);

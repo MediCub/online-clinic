@@ -38,7 +38,7 @@ function HeaderComponent({ history }) {
   };
 
   const handleClickPacientes = () => {
-    history.push('/pacientes');
+    history.push('/doctor/pacientes');
   };
 
   const handleClickDoctor = () => {

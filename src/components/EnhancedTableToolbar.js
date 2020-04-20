@@ -10,7 +10,6 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/DeleteRounded';
 import FilterListIcon from '@material-ui/icons/FilterList';
-import { isNil } from 'ramda';
 import { ADD_FORM_TEXT, DELETE_FORM_TEXT, EDIT_FORM_TEXT } from '../commons/globalText';
 
 const useToolbarStyles = makeStyles(theme => ({
@@ -56,30 +55,36 @@ const EnhancedTableToolbar = props => {
     <Toolbar
       color="primary"
       className={clsx(classes.root, {
-        [classes.highlight]: !!selected,
+        [classes.highlight]: selected.length > 0,
       })}
     >
-      <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
-        {title}
-      </Typography>
+      {selected.length > 0 ? (
+        <Typography className={classes.title} color="inherit" variant="subtitle1" component="div">
+          {selected.length} seleccionados
+        </Typography>
+      ) : (
+        <Typography className={classes.title} variant="h6" id="tableTitle" component="div">
+          {title}
+        </Typography>
+      )}
       <IconButton variant="contained" color="primary" arial-label="add" onClick={handleAddItem}>
         <AddIcon fontSize="large" />
       </IconButton>
-      {selected && (
+      {selected.length === 1 && (
         <Tooltip title="Delete">
           <IconButton aria-label="delete" onClick={handleEditSelected}>
             <EditIcon />
           </IconButton>
         </Tooltip>
       )}
-      {selected && (
+      {selected.length > 0 && (
         <Tooltip title="Delete">
           <IconButton color="secondary" aria-label="delete" onClick={handleDeleteSelecteds}>
             <DeleteIcon />
           </IconButton>
         </Tooltip>
       )}
-      {isNil(selected) && (
+      {selected.length < 1 && (
         <Tooltip title="Filter list">
           <IconButton aria-label="filter list">
             <FilterListIcon />
