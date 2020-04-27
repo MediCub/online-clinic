@@ -115,10 +115,10 @@ export default function AddOrEditHospitalComponent() {
               </Grid>
 
               <Grid item className={classes.buttonActions} xs={12}>
-                <Button variant="contained" onClick={handleCancel}>
+                <Button disableElevation variant="contained" onClick={handleCancel}>
                   cancelar
                 </Button>
-                <Button variant="contained" type="submit" color="primary">
+                <Button disableElevation variant="contained" type="submit" color="primary">
                   guardar
                 </Button>
               </Grid>

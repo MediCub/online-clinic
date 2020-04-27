@@ -103,10 +103,10 @@ function AddOrEditProfilesComponent({ title }) {
                   <RoleFieldComponent classes={classes} />
                 </Grid>
                 <Grid item container xs={12} justify="space-evenly">
-                  <Button variant="contained" onClick={handleCancel}>
+                  <Button disableElevation variant="contained" onClick={handleCancel}>
                     Cancel
                   </Button>
-                  <Button variant="contained" type="submit" color="primary">
+                  <Button disableElevation variant="contained" type="submit" color="primary">
                     Guardar
                   </Button>
                 </Grid>

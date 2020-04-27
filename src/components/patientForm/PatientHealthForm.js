@@ -81,8 +81,10 @@ const PatientHEalthForm = ({ location }) => {
                 marginTop: 15,
               }}
             >
-              <Button onClick={handleReset}>Cancelar</Button>
-              <Button type="submit" color="primary">
+              <Button disableElevation onClick={handleReset}>
+                Cancelar
+              </Button>
+              <Button disableElevation type="submit" color="primary">
                 Guardar
               </Button>
             </div>

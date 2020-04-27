@@ -78,6 +78,7 @@ function RegisterFormComponent() {
               <Grid item xs={12}>
                 <div className={classes.wrapper}>
                   <Button
+                    disableElevation
                     type="submit"
                     className={classes.formControl}
                     variant="contained"

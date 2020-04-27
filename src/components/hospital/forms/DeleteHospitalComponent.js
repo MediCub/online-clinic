@@ -33,10 +33,10 @@ export default function DeleteHospitalComponent() {
           <Typography>Esta seguro que desea eliminar el hospital seleccionado.</Typography>
         </Grid>
         <Grid item className={classes.buttonActions} xs={12}>
-          <Button variant="contained" size="small" onClick={handleCancel}>
+          <Button disableElevation variant="contained" size="small" onClick={handleCancel}>
             cancelar
           </Button>
-          <Button size="small" variant="contained" color="secondary" onClick={onDelete}>
+          <Button disableElevation size="small" variant="contained" color="secondary" onClick={onDelete}>
             eliminar
           </Button>
         </Grid>

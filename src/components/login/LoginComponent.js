@@ -82,6 +82,7 @@ function LoginComponent() {
             <Grid item xs={12}>
               <div className={classes.wrapper}>
                 <Button
+                  disableElevation
                   disabled={loadingState}
                   className={classes.formControl}
                   type="submit"
@@ -94,7 +95,13 @@ function LoginComponent() {
               </div>
             </Grid>
             <Grid item xs={12}>
-              <Button className={classes.formControl} color="default" variant="contained" onClick={onRegisterClick}>
+              <Button
+                disableElevation
+                className={classes.formControl}
+                color="default"
+                variant="contained"
+                onClick={onRegisterClick}
+              >
                 Registrarse
               </Button>
             </Grid>
